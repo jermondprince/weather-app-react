@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchLocation from "./searchLocation";
+import TopSection from "./topSection";
 
 function App() {
   //States
@@ -9,19 +10,7 @@ function App() {
     <div className="App">
       <SearchLocation setData={setData} />
       <div className="container">
-        <div className="top">
-          <div className="location">
-            <p>{data.name}</p>
-          </div>
-          <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
-          </div>
-          <div className="description">
-            {data.weather ? (
-              <p className="bold">{data.weather[0].main}</p>
-            ) : null}
-          </div>
-        </div>
+        <TopSection data={data} />
         {data.name != undefined && (
           <div className="bottom">
             <div className="feels">

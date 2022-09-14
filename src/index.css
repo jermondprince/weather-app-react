@@ -40,7 +40,7 @@ h1 {
   z-index: -1;
 }
 
-.App .search {
+.search {
   text-align: center;
   padding: 1rem;
 }
@@ -69,19 +69,19 @@ h1 {
   justify-content: space-between;
 }
 
-.App .top {
+.top {
   width: 100%;
   margin: 1rem auto;
 }
 
-.App .description {
+.description {
   position: relative;
   right: -90%;
   transform-origin: 0 0;
   transform: rotate(269deg);
 }
 
-.App .bottom {
+.bottom {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
