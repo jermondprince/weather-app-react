@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import SubmitButton from "./button";
 
 const SearchLocation = ({ setData }) => {
   //State
@@ -28,6 +29,7 @@ const SearchLocation = ({ setData }) => {
         onKeyDown={search}
         placeholder="Enter Location"
       />
+      <SubmitButton url={url} setData={setData} setLocation={setLocation} />
     </div>
   );
 };
