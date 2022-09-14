@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BottomSection from "./bottomSection";
-import SearchLocation from "./searchLocation";
-import TopSection from "./topSection";
+import BottomSection from "./components/bottomSection";
+import SearchLocation from "./components/searchLocation";
+import TopSection from "./components/topSection";
 
 function App() {
   //States
