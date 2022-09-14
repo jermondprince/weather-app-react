@@ -1,36 +1,13 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import SearchLocation from "./searchLocation";
 
 function App() {
   //States
   const [data, setData] = useState({});
-  const [location, setLocation] = useState("");
-
-  //Variables
-  const apiKey = "c77a70b319946db83eda527a465749d5";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
-
-  const searchLocation = (e) => {
-    if (e.key === "Enter") {
-      axios.get(url).then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      });
-      setLocation("");
-    }
-  };
 
   return (
     <div className="App">
-      <div className="search">
-        <input
-          type="text"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          onKeyDown={searchLocation}
-          placeholder="Enter Location"
-        />
-      </div>
+      <SearchLocation setData={setData} />
       <div className="container">
         <div className="top">
           <div className="location">
