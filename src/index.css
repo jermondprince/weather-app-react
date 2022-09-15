@@ -95,3 +95,18 @@ h1 {
 .bold {
   font-weight: 700;
 }
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.navbar {
+  padding: 1rem 10rem;
+}

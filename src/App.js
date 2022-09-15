@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import BottomSection from "./components/bottomSection";
-import SearchLocation from "./components/searchLocation";
-import TopSection from "./components/topSection";
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Nav from "./components/nav";
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
 
 function App() {
   //States
@@ -9,11 +12,16 @@ function App() {
 
   return (
     <div className="App">
-      <SearchLocation setData={setData} />
-      <div className="container">
-        <TopSection data={data} />
-        {data.name != undefined && <BottomSection data={data} />}
-      </div>
+      <Nav />
+      <Routes>
+        <Route
+          path="/"
+          exact
+          element={<Home data={data} setData={setData} />}
+        />
+        <Route path="/about" exact element={<AboutUs />} />
+        <Route path="/contact" exact element={<Contact />} />
+      </Routes>
     </div>
   );
 }
